@@ -4,7 +4,7 @@ import './App.css';
 import Titles from './components/Titles/Title';
 import Form from './components/Form/Form';
 import Weather from './components/Weather/Weather';
-import Gmap from './components/Gmap/gmap';
+
 
 const API_KEY = "aeb140d98aa91fd182f6d654a271b77f";
 
@@ -64,20 +64,20 @@ class App extends Component {
       <div className="App">
 
         <Titles/>
+
         <Form getWeather={this.getWeather}/>
-          <Weather
-            temperature={this.state.temperature}
-            temperatureHigh={this.state.temperatureHigh}
-            temperatureLow={this.state.temperatureLow}
-            humidity={this.state.humidity}
-            city={this.state.city}
-            country={this.state.country}
-            description={this.state.description}
-            error={this.state.error}
-              />
-            <Gmap
-              city={this.state.city}
-              country={this.state.country}/>
+
+        <Weather
+          temperature={this.state.temperature}
+          temperatureHigh={this.state.temperatureHigh}
+          temperatureLow={this.state.temperatureLow}
+          humidity={this.state.humidity}
+          city={this.state.city}
+          country={this.state.country}
+          description={this.state.description}
+          error={this.state.error}/>
+
+
       </div>
     );
   }
