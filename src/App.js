@@ -4,6 +4,7 @@ import './App.css';
 import Titles from './components/Titles/Title';
 import Form from './components/Form/Form';
 import Weather from './components/Weather/Weather';
+import Leaflet from './components/Leaflet/Leaflet';
 
 
 const API_KEY = "aeb140d98aa91fd182f6d654a271b77f";
@@ -14,6 +15,8 @@ class App extends Component {
     temperatureHigh: undefined,
     temperatureLow: undefined,
     city: undefined,
+    lat:undefined,
+    lon:undefined,
     country: undefined,
     humidity: undefined,
     description: undefined,
@@ -40,6 +43,8 @@ class App extends Component {
         temperatureHigh: data.main.temp_max,
         temperatureLow: data.main.temp_min,
         city: data.name,
+        lat: data.coord.lat,
+        lon: data.coord.lon,
         country: data.sys.country,
         humidity: data.main.humidity,
         description: data.weather[0].description,
@@ -51,6 +56,8 @@ class App extends Component {
         temperatureHigh: undefined,
         temperatureLow: undefined,
         city: undefined,
+        lat:undefined,
+        lon:undefined,
         country: undefined,
         humidity: undefined,
         description: undefined,
@@ -76,6 +83,10 @@ class App extends Component {
           country={this.state.country}
           description={this.state.description}
           error={this.state.error}/>
+
+          <Leaflet
+            lat={this.state.lat}
+            lon={this.state.lon}/>
 
 
       </div>
