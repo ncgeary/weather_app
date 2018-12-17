@@ -1,1 +1,1 @@
-This project is an introduction to use an open API.
+Introduction project using the Leaflet and OpenStreetMap API's to create a weather website. 
