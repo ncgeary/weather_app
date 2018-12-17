@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 
 
-const Leaflet = props => (
+const Leaflet = (props) => (
 
   <Map
     center={[props.lat,props.lon]}
