@@ -1,6 +1,6 @@
 import React from 'react';
-import { render } from 'react-dom';
-import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+// import { render } from 'react-dom';
+import { Map, TileLayer } from 'react-leaflet';
 
 
 const Leaflet = (props) => (
@@ -22,6 +22,5 @@ const Leaflet = (props) => (
   </Map>
 );
 
-render(map, document.getElementById('map-container'))
 
 export default Leaflet;

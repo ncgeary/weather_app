@@ -4,8 +4,8 @@ import './App.css';
 import Titles from './components/Titles/Title';
 import Form from './components/Form/Form';
 import Weather from './components/Weather/Weather';
-import Leaflet from './components/Leaflet/Leaflet';
-
+{/*import Leaflet from './components/Leaflet/Leaflet';
+import LeafletLoad from './components/Leaflet/LeafletLoad';*/}
 
 const API_KEY = "aeb140d98aa91fd182f6d654a271b77f";
 
@@ -20,6 +20,7 @@ class App extends Component {
     country: undefined,
     humidity: undefined,
     description: undefined,
+    icon: undefined,
     error: undefined
   }
 
@@ -48,6 +49,7 @@ class App extends Component {
         country: data.sys.country,
         humidity: data.main.humidity,
         description: data.weather[0].description,
+        icon: data.weather[0].icon,
         error: ""
       });
     } else {
@@ -61,6 +63,7 @@ class App extends Component {
         country: undefined,
         humidity: undefined,
         description: undefined,
+        icon: undefined,
         error: "Please enter the values."
       });
     }
@@ -82,11 +85,13 @@ class App extends Component {
           city={this.state.city}
           country={this.state.country}
           description={this.state.description}
+          icon={this.state.icon}
           error={this.state.error}/>
 
-          <Leaflet
+          {/*<Leaflet
             lat={this.state.lat}
             lon={this.state.lon}/>
+          <LeafletLoad/>*/}
 
 
       </div>

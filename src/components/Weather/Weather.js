@@ -2,7 +2,7 @@ import React from "react";
 
 const Weather = props => (
 	<div className="weather__info">
-  
+
 	 {props.city && props.country &&
      <p className="weather__key">
       Location:
@@ -12,19 +12,19 @@ const Weather = props => (
 	 {props.temperature &&
      <p className="weather__key">
       Current Temperature:
-	 		<span className="weather__value"> { props.temperature }	</span>
+	 		<span className="weather__value"> { props.temperature }	</span> &deg;F
 	 	</p>}
 
     {props.temperatureHigh &&
       <p className="weather__key">
       Today's High:
- 	 		<span className="weather__value"> { props.temperatureHigh }	</span>
+ 	 		<span className="weather__value"> { props.temperatureHigh }	</span> &deg;F
  	 	</p>}
 
     {props.temperatureLow &&
       <p className="weather__key">
        Today's Low:
- 	 		<span className="weather__value"> { props.temperatureLow }	</span>
+ 	 		<span className="weather__value"> { props.temperatureLow }	</span> &deg;F
  	 	</p>}
 
 	 {props.humidity &&
@@ -36,7 +36,7 @@ const Weather = props => (
 	 {props.description &&
      <p className="weather__key">
       Conditions:
-	 		<span className="weather__value"> { props.description } </span>
+	 		<span className="weather__value"> { props.description }</span>
 	 </p>}
 
 	 {props.error && <p className="weather__error">{ props.error }</p>}
