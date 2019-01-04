@@ -1,7 +1,7 @@
 import React from "react";
 
 const Weather = props => (
-	<div className="weather__info">
+	<div className="weather__info" id="weathertrig">
 
 	 {props.city && props.country &&
      <p className="weather__key">

@@ -9,6 +9,7 @@ import LeafletLoad from './components/Leaflet/LeafletLoad';*/}
 
 const API_KEY = "aeb140d98aa91fd182f6d654a271b77f";
 
+
 class App extends Component {
   state = {
     temperature: undefined,
@@ -35,7 +36,7 @@ class App extends Component {
 
     const data = await api_call.json();
 
-    console.log(data);
+    {/*console.log(data);*/}
 
 
     if (city && country) {
@@ -87,6 +88,7 @@ class App extends Component {
           description={this.state.description}
           icon={this.state.icon}
           error={this.state.error}/>
+
 
           {/*<Leaflet
             lat={this.state.lat}

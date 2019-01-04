@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './Title.css';
 
 class Titles extends Component{
   render(){
