@@ -1,1 +1,1 @@
-Introduction project using the Leaflet and OpenStreetMap API's to create a weather website. 
+Introduction project using Reactjs and OpenStreetMap's API to create a basic weather website. 
